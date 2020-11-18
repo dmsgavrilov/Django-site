@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Dmitrii Gavrilov</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="{% url 'home'%}">Current tasks</a>
+    <a class="p-2 text-dark" href="{% url 'about'%}">About me</a>
+    <a class="p-2 text-dark" href="{% url 'add-task'%}">Add task</a>
+    <a class="p-2 text-dark" href="{% url 'upload-file'%}">Upload file</a>
+    <a class="p-2 text-dark" href="{% url 'find-file'%}">Find file</a>
+  </nav>
+  <a class="btn btn-outline-primary" href="/admin">Sign up</a>
+</div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

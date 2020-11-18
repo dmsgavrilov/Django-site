@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Upload file
+{% endblock %}
+
+{% block content %}
+    <h1>Upload file</h1>
+    <div class="alert alert-warning mt-2">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.description}}<br>
+            {{form.document}}<br>
+            <br>
+            <button type="submit" class="btn btn-success">Upload</button>
+            <span>{{ error }}</span>
+        </form>
+    </div>
+{% endblock %}
